@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Cash&amp;Currency</string>
+    <string name="escribe_tu_disponible_en_dolares">escribe tu disponible en dolares</string>
+    <string name="elige_las_monedas_que_quieras">elige las monedas que quieras</string>
+</resources>

@@ -1,0 +1,4 @@
+ext {
+    buildCode = 1
+    buildName = "1.0.0.0-SNAPSHOT"
+}
