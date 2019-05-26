@@ -1,4 +1,4 @@
-package com.delarosa.cashandcurrency.util
+package com.delarosa.cashcurrency.util
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity

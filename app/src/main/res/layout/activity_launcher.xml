@@ -12,7 +12,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-
+            android:background="@android:color/white"
+            android:id="@+id/background_launcher"
             android:layout_height="match_parent">
 
     </androidx.constraintlayout.widget.ConstraintLayout>

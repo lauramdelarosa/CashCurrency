@@ -118,4 +118,8 @@ dependencies {
     implementation "com.squareup.moshi:moshi:$rootProject.moshiCodegenVersion"
     kapt "com.squareup.moshi:moshi-kotlin-codegen:$rootProject.moshiCodegenVersion"
 
+    // Kotlin Coroutines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.2.1'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.2.1'
+
 }
