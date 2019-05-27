@@ -53,7 +53,6 @@ class LauncherActivity : DaggerAppCompatActivity() {
                         MainActivity::class.java
                     ).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NO_ANIMATION)
                 )
-                else -> startActivity(Intent(this, ConfigActivity::class.java))
             }.checkAllMatched
             launcherViewModel.updatePreferenceConfigFirstTime()
             finish()

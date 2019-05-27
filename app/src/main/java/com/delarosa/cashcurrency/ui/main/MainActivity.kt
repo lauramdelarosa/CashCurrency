@@ -2,12 +2,9 @@ package com.delarosa.cashcurrency.ui.main
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
-import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.ViewModelProviders
 import com.delarosa.cashcurrency.R
 import com.delarosa.cashcurrency.databinding.ActivityMainBinding
 import com.delarosa.cashcurrency.model.Currency
@@ -16,7 +13,7 @@ import com.delarosa.cashcurrency.util.viewModelProvider
 import dagger.android.support.DaggerAppCompatActivity
 import javax.inject.Inject
 
-class MainActivity : DaggerAppCompatActivity(){
+class MainActivity : DaggerAppCompatActivity() {
     @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory
     private lateinit var mainViewModel: MainViewModel
@@ -54,6 +51,6 @@ class MainActivity : DaggerAppCompatActivity(){
      * when item is clicked
      */
     fun itemClicked(gridItem: Currency) {
-
+//todo mensaje de elminar moneda y eliminarla
     }
 }

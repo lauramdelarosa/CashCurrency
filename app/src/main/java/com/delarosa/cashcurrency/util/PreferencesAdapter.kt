@@ -26,21 +26,21 @@ class PreferencesAdapter(internal var mContext: Context) {
     fun setPreferenceString(key: String, valor: String) {
         editor = preferences.edit()
         editor.putString(key, valor)
-        editor.commit()
+        editor.apply()
 
     }
 
     fun setPreferenceInt(key: String, valor: Int) {
         editor = preferences.edit()
         editor.putInt(key, valor)
-        editor.commit()
+        editor.apply()
 
     }
 
     fun setPreferenceBoolean(key: String, valor: Boolean) {
         editor = preferences.edit()
         editor.putBoolean(key, valor)
-        editor.commit()
+        editor.apply()
 
     }
 

@@ -47,7 +47,6 @@ class ConfigViewModel @Inject constructor(
     private fun fetchInitialData() {
         preferencesAdapter.getPreferenceString(PreferencesAdapter.LIST)?.let {
             val gson = Gson()
-
             if (it != "") {
                 val text = gson.fromJson(it, Array<String>::class.java).toList()
                 listOfSelectedCurrencies = if (text.size == 1)
