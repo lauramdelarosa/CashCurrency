@@ -12,7 +12,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-
+            android:background="@color/colorPrimary"
             android:layout_height="match_parent">
         <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="0dp"
@@ -46,26 +46,33 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:inputType="number"
+                    android:drawableEnd="@drawable/ic_attach_money_black_24dp"
+                    android:textColor="@color/colorWhite"
                     android:ems="10"
+                    android:text="@={viewModel.availableTextInput}"
+
+                    android:textAlignment="center"
                     android:id="@+id/edit_text_available"
                     app:layout_constraintStart_toStartOf="parent" android:layout_marginBottom="61dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintBottom_toTopOf="@+id/text_view_choose_currency"/>
             <androidx.appcompat.widget.AppCompatSpinner
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:shadowColor="@color/colorWhite"
                     android:id="@+id/spinner_currency" app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
-                    android:layout_marginStart="8dp"
-                    app:layout_constraintBottom_toBottomOf="parent" android:layout_marginEnd="8dp"
+                    android:layout_marginStart="32dp"
+                    app:layout_constraintBottom_toBottomOf="parent" android:layout_marginEnd="32dp"
             />
             <Button
                     android:text="Siguiente"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/button_next"
+                    android:enabled="@{editTextAvailable.text.length() > 0}"
                     android:onClick="@{() -> viewModel.validateData()}"
-
+                    android:textColor="@color/colorPrimaryDark"
                     app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent" android:layout_marginBottom="51dp"/>
 

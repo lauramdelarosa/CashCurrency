@@ -5,6 +5,7 @@ import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.*
+import javax.inject.Inject
 
 // region Fragments
 
@@ -108,4 +109,13 @@ inline fun consume(f: () -> Unit): Boolean {
     return false
 }
 
+class ViewModelFactory<T : ViewModel> @Inject constructor(
+    private val viewModel: Lazy<T>
+) : ViewModelProvider.Factory {
+    @Suppress("UNCHECKED_CAST")
+    override fun <T : ViewModel?> create(modelClass: Class<T>): T = viewModel as T
+
+    inline fun <reified T : ViewModel> ViewModelFactory<T>.get(activity: FragmentActivity): T =
+        ViewModelProviders.of(activity, this).get(T::class.java)
+}
 // endregion

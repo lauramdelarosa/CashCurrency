@@ -91,13 +91,13 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/text_your_available"
-android:textSize="16sp"
+                        android:textSize="16sp"
                         android:layout_marginTop="32dp"
                         app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
                         android:layout_marginStart="32dp" app:layout_constraintBottom_toBottomOf="parent"
                         android:layout_marginBottom="32dp"/>
                 <androidx.appcompat.widget.AppCompatTextView
-                        android:text="2.500"
+                        android:text="@{viewModel.availableText}"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
