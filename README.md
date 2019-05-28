@@ -19,10 +19,15 @@ solo en 3 simples pasos
 ![](convierte.gif)
 
 
-esta aplicación esta hecha con 
+esta aplicación esta hecha con :
+
 inyeccion de dependencias Dagger2
+
 patron de arquitectura MVC cuenta con viewModels para el control de data. 
+
 es proyectable a MVVM y Room
+
 Retrofit
+
 Kotlin
 
